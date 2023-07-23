@@ -1,6 +1,10 @@
 import openai
+import os
+from dotenv import load_dotenv
 
-openai.api_key = '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'  # Replace with your OpenAI API key
+load_dotenv()
+
+openai.api_key = os.getenv("CHATGPT_API_KEY")  # Replace with your OpenAI API key
 
 history=[
             {"role": "system", "content": "Hi. Your name is Ro'za and you are created by a programmer called Endie to help people."},

@@ -1,2 +1,7 @@
 from telebot import TeleBot
-bot=TeleBot(token="BOT_TOKEN",parse_mode="MARKDOWN")
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+bot=TeleBot(token=os.getenv("BOT_TOKEN"),parse_mode="MARKDOWN")
